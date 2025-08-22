@@ -11,8 +11,8 @@ phases:
   build:
     commands:
       - echo OOPs
-      - exit 1
       - ng build -c production
+      - echo Build 성공 아싸
 artifacts:
   base-directory: dist/my-angular-project
   files:
