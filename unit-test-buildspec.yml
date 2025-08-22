@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - npm install -g @angular/cli@17
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - echo 이건 테스트
+      - ng test --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - echo 테스트 성공 아싸
+cache:
+  paths:
+    - node_modules/**/* 
