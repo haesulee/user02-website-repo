@@ -10,8 +10,13 @@ phases:
       - npm install
   build:
     commands:
+      - echo OOPs
+      - exit 1
       - ng build -c production
 artifacts:
   base-directory: dist/my-angular-project
   files:
     - '**/*'
+cache:
+  paths:
+    - node_modules/**/* 
