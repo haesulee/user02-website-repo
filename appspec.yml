@@ -16,4 +16,10 @@ hooks:
   ApplicationStart:
     - location: deploy-scripts/application-start-hook.sh
       timeout: 300
+artifacts:
+  files:
+    - 'dist/test-angular-project/**/*'
+    - appspec.yml
+    - 'deploy-scripts/**/*'
+
       
